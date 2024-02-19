@@ -1,14 +1,8 @@
 # OneSpot - Simplifying Housing and Social Experiences
 
-## Rough Object Model
-
-[![Rough Object model](objectmodel.jpeg)]
-
 ## Detailed Object Model
 [![Detailed Object model](DetailedObjectModel.png)]
 
-## Project Ideation and Rough Tracker
-https://docs.google.com/spreadsheets/d/1tzB7FZyj7R98kTlTe5e8taOGFv37yzAjoJMWu7ZzVLI/edit#gid=0
 
 ## Mission
 
@@ -58,8 +52,6 @@ The OneSpot technology stack is carefully selected to deliver a cutting-edge, re
 
 # HomePage
 
-## Project Tracker Documentation
-https://docs.google.com/spreadsheets/d/1tzB7FZyj7R98kTlTe5e8taOGFv37yzAjoJMWu7ZzVLI/edit#gid=0
 
 ## Identified APIs
 
@@ -189,12 +181,3 @@ A unique feature allowing users to earn by verifying houses before payments, enh
 - Develop middleware for creating, viewing, and managing posts.
 - Implement middleware for viewing and interacting with activities.
 - Develop middleware for updating user profiles and handling physical verifications.
-
-
-### Project Presentation 
-https://northeastern-my.sharepoint.com/personal/paduchuri_v_northeastern_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fpaduchuri%5Fv%5Fnortheastern%5Fedu%2FDocuments%2FRecordings%2FCall%20with%20Ajay%20and%202%20others%2D20231213%5F233433%2DMeeting%20Recording%2Emp4&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview
-
-https://northeastern-my.sharepoint.com/:v:/g/personal/paduchuri_v_northeastern_edu/EQEOuBwlhUZBiN5CljsaJxIBF0cvzpUSmuRVBkKW_RizZg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=BnGYFY
-
-### Project Slides
-https://www.canva.com/design/DAF26VxlToA/HntJzn7oJsYqs9cIqMbrLQ/edit
