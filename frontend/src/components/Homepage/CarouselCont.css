@@ -1,0 +1,149 @@
+
+.carousel {
+    height: 60vh;
+    margin-left: 50px;
+    border-radius: 15px;
+    overflow: hidden; 
+  }
+  
+  
+  .carousel .carousel-slide {
+    position: relative;
+  }
+  
+  .carousel img {
+    width: 95%;
+    height: 100%;
+  }
+  
+  .carousel .slide {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    padding: 30px;
+    height: 50vh;
+    position: relative;
+  }
+  
+  .slide > div:first-of-type {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 15px;
+  }
+  
+  .slide h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .slide p {
+    font-size: 16px;
+  }
+  
+  /* Navigation and indicators */
+  .carousel > div:nth-of-type(2),
+  .carousel > div:nth-of-type(3) {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  .carousel > div:nth-of-type(2) .icon,
+  .carousel > div:nth-of-type(3) .icon {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .carousel:hover > div:nth-of-type(2),
+  .carousel:hover > div:nth-of-type(3) {
+    opacity: 1;
+  }
+  
+  .carousel > div:last-of-type {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .carousel > div:last-of-type .line {
+    opacity: 0.6;
+    width: 40px;
+    height: 4px;
+    background-color: var(--gray-text);
+    transition: all 0.3s;
+    margin: 0 10px;
+  }
+  
+  .carousel > div:last-of-type .line:hover {
+    transform: scale(1.1);
+  }
+  
+  .carousel > div:last-of-type .active .line {
+    background-color: var(--theme-color);
+  }
+
+.carousel-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff; 
+    padding: 8px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .carousel-nav-button:hover {
+    background-color: #ccc; 
+    color: #fff; 
+  }
+  
+  .carousel-nav-button.left {
+    left: 10px; 
+  }
+  
+  .carousel-nav-button.right {
+    right: 90px;
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 950px) {
+    .slide p {
+      font-size: 17px;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .carousel .slide {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    .slide > div:last-of-type {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      bottom: -60px;
+      right: 0;
+    }
+  
+    .slide > div:first-of-type {
+      justify-content: flex-start;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .slide .graytext span {
+      font-size: 14px;
+    }
+  
+    .slide img {
+      display: none;
+    }
+  }
+  

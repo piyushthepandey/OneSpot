@@ -1,0 +1,147 @@
+openapi: 3.1.0
+info:
+  title: User Profile API
+  description: API for managing user profiles
+  version: 1.0.0
+servers: 
+  - url: http://localhost:8080
+paths:
+  /profile/{userId}:
+    get:
+      summary: Get User Profile
+      description: Retrieve user profile information.
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the user profile to retrieve
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: sgdn-2342n-24141df
+      responses:
+        '200':
+          description: Successful retrieval of user profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UserProfile"
+        '404':
+          description: User profile not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+    put:
+      summary: Update User Profile
+      description: Update user profile information.
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the user profile to update
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: sgdn-2342n-24141df
+      requestBody:
+        description: New user profile data
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UserProfileInput"
+      responses:
+        '200':
+          description: Successful update of user profile
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User profile updated successfully
+        '404':
+          description: User profile not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+    delete:
+      summary: Delete User Profile
+      description: Delete user profile.
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the user profile to delete
+          required: true
+          schema:
+            type: string
+            format: uuid
+            example: sgdn-2342n-24141df
+      responses:
+        '204':
+          description: User profile deleted successfully
+        '404':
+          description: User profile not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+components:
+  schemas:
+    UserProfile:
+      type: object
+      properties:
+        userId:
+          type: string
+          format: uuid
+          example: sgdn-2342n-24141df
+        username:
+          type: string
+          example: mohit_bhagwanani
+        email:
+          type: string
+          example: bhagwanani.m@northeastern.edu
+        gender:
+          type: string
+          example: male
+        mobileNumber:
+          type: string
+          example: +18573959783
+        firstName:
+          type: string
+          example: Mohit
+        lastName:
+          type: string
+          example: Bhagwanani
+    UserProfileInput:
+      type: object
+      properties:
+        username:
+          type: string
+        email:
+          type: string
+        gender:
+          type: string
+        mobileNumber:
+          type: integer
+        firstName:
+          type: string
+        lastName:
+          type: string
+    Error:
+      type: object
+      properties:
+        code: 
+          type: string
+          description: Error code
+          example: AuthenticationError
+        message: 
+          type: string
+          description: Error message
+          example: User not found

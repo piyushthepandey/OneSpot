@@ -1,0 +1,281 @@
+{
+  "welcome_to_one_spot": "Welcome to OneSpot",
+  "one_spot": "OneSpot",
+  "login.button.text": "Sign In",
+  "signup.button.text": "Sign Up",
+  "login.placeholder": "Login",
+  "email.placeholder": "Email",
+  "password.placeholder": "Password",
+  "already_have_account": "Already have an account?",
+  "something_went_wrong": "Something went wrong",
+  "heading1": "OneSpot",
+  "heading2": "For All Your Accommodation Needs!",
+  "subtitle": "At OneSpot, we're not just creating a platform; we're building a community...",
+  "housing_activities_networking": "Housing, Activities, Networking - All under one roof!",
+  "tired_of_joining_groups": "Tired of joining countless WhatsApp, Facebook groups just to find roommates, housing or activities?",
+  "latest_housing_posts": "Latest Housing Posts",
+  "latest_activity_posts": "Latest Activity Posts",
+  "looking_for_roommates": "Looking for roommates?",
+  "create_post": "Create Post",
+  "looking_for_housing": "Looking for housing?",
+  "view_housing_posts": "View Housing Posts",
+  "subscribe_to_newsletter": "Subscribe to Our Newsletter",
+  "enter_your_email": "Enter your email",
+  "subscribe_button": "Subscribe",
+  "404": "Oops! the page you seem to be looking for doesn't exist.",
+  "home_page": "Home Page",
+  "user": {
+    "email": "Email",
+    "password": "Password",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "user_name": "User Name",
+    "phone_number": "Phone Number",
+    "gender": "Gender",
+    "date_of_birth": "Date of Birth",
+    "country": "Country",
+    "select_country": "Select Country",
+    "select_gender": "Select Gender",
+    "user_disabled": "User Disabled",
+    "profile_title": "Profile",
+    "issue_in_profile_page": "Issue in Profile Page",
+    "update_profile": "Update Profile",
+    "delete_account": "Delete Account",
+    "sign_out": "Sign Out",
+    "profile_updated": "Profile Updated",
+    "name_required": "Name is Required",
+    "email_invalid": "Email is Invalid",
+    "phone_invalid": "Phone is Invalid",
+    "message_required": "Please enter Message",
+    "name": "Name",
+    "message": "Enter your message...",
+    "message_sent_successfully": "Message Sent Successfully",
+    "message_not_sent": "Message not sent due to an error, Please try again later"
+  },
+  "common_constants": {
+    "about_us": "About Us",
+    "contact_us": "Contact Us",
+    "privacy": "Privacy",
+    "terms_of_use": "Terms of Use",
+    "faq": "FAQ",
+    "about": "About",
+    "help": "Help",
+    "consumer_policy": "Consumer Policy",
+    "socials": "Socials",
+    "dont_have_account": "Don't have an account?",
+    "sent_successfully": "Message sent Successfully",
+    "send": "Send",
+    "post_created": "Post Created Successfully"
+  },
+  "privacy_policy": {
+    "page_title": "Privacy Policy",
+    "section_1": {
+      "title": "Our Commitment to Your Privacy",
+      "content": "At OneSpot, we are committed to protecting your privacy. Your personal information is securely managed, and we do not share it without your consent."
+    },
+    "section_2": {
+      "title": "Data Security",
+      "content": "We prioritize the security of your data. OneSpot employs advanced encryption and security measures to safeguard your information, ensuring a secure and trustworthy platform for our users."
+    },
+    "section_3": {
+      "title": "Cookie Policy",
+      "content": "Our use of cookies is designed to enhance your experience on OneSpot, and critical functionalities rely on it. By using OneSpot, you agree to our use of cookies."
+    },
+    "section_4": {
+      "title": "Updates to Privacy Policy",
+      "content": "We may update our privacy policy from time to time. We will notify you of any changes to our privacy policy by posting the new privacy policy on this page."
+    }
+  },
+  "terms_of_use": {
+    "page_title": "Terms and Conditions",
+    "section_1": {
+      "title": "User Responsibilities",
+      "content": "Users play a crucial role in maintaining the integrity of the OneSpot community. Familiarize yourself with your responsibilities as a user, including adhering to community guidelines and acceptable use policies."
+    },
+    "section_2": {
+      "title": "Listing Accuracy",
+      "content": "We aim to provide accurate and reliable information on our platform. However, we cannot guarantee the accuracy of all information, and we are not responsible for any inaccuracies. If you notice any inaccuracies, please report them to us, and we will investigate. Please reach out to us by going to our contact us page."
+    },
+    "section_3": {
+      "title": "Services",
+      "content": "OneSpot is a platform that connects users with other users. We do not provide any services ourselves, and we are not responsible for the quality of services provided by other users. If you have any issues with the listings, please contact the user who provided the service and inform us of the issue if not yet resolved."
+    },
+    "section_4": {
+      "title": "Termination of Account",
+      "content": "OneSpot reserves the right to terminate any account at any time for any reason. If you believe your account was terminated in error, please contact us."
+    }
+  },
+  "faq_page": {
+    "page_title": "Frequently Asked Questions",
+    "section_1": {
+      "title": "How do I create a listing for Housing?",
+      "content": "To create a housing listing on our platform, simply log in to your account, navigate to the Housing section, and click on 'Create Housing Post' and provide detailed information about your housing. Make sure to include essential details such as the number of rooms, bathrooms, and amenities. You can also upload pictures of your housing to make your listing more attractive."
+    },
+    "section_2": {
+      "title": "How do I create a listing for Activities?",
+      "content": "To create an activities listing on our platform, simply log in to your account, navigate to the Activities section, and click on 'Create Activities Post' and provide detailed information about your activity. Make sure to include essential details such as the activity name, location, and time. You can also upload pictures of your activity to make your listing more attractive."
+    },
+    "section_3": {
+      "title": "Can I contact the person who posted a listing?",
+      "content": "Yes, our platform encourages communication between users. You can use the provided contact information to get in touch with the person who posted a housing or activity listing."
+    },
+    "section_4": {
+      "title": "How can I report inappropriate content or behavior?",
+      "content": "If you come across any content or behavior that violates our community guidelines, please report it to us by going to our contact us page."
+    },
+    "section_5": {
+      "title": "What safety measures are in place for in-person activities?",
+      "content": "While we at OneSpot encourage users to exercise caution and follow local guidelines. We recommend meeting in public spaces for the first time. If you are meeting in a private space, make sure to inform someone you trust of your location and when you expect to return. If you feel unsafe at any point, please contact the authorities."
+    }
+  },
+  "sidebar": {
+    "main": "MAIN",
+    "dashboard": "Dashboard",
+    "list": "LIST",
+    "users": "Users",
+    "stats": "Stats",
+    "recent_housing_posts": "Recent Housing Posts",
+    "recent_activity_posts": "Recent Activity Posts"
+  },
+  "featured": {
+    "total_revenue": "Total Revenue",
+    "total_sales_today": "Total sales today",
+    "previous_transactions_processing": "Previous transactions processing. Last payments may not be included.",
+    "target": "Target",
+    "last_week": "Last Week",
+    "last_month": "Last Month"
+  },
+  "title": {
+    "primary_color": "primary",
+    "gutter_bottom": "gutterBottom"
+  },
+  "userlist": {
+    "title": "User List",
+    "username": "UserName",
+    "email": "Email",
+    "phoneNumber": "Phone Number",
+    "role": "Role",
+    "actions": "Actions",
+    "delete": "Delete",
+    "seeMore": "See more users"
+  },
+  "statcard": {
+    "total_sales_today": "Total sales today"
+  },
+  "housing_posts_list": {
+    "recent_housing_posts": "Recent Housing Posts",
+    "title": "Title",
+    "author": "Author",
+    "location": "Location",
+    "rent": "Rent",
+    "actions": "Actions",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "see_more_housing_posts": "See more housing posts"
+  },
+  "dashboard_page": {
+    "total_revenue": "Total Revenue"
+  },
+  "activity_posts": {
+    "see_more": "See more activity posts",
+    "page_title": "Recent Activity Posts",
+    "table_columns": {
+      "title": "Title",
+      "author": "Author",
+      "created_date": "Created Date",
+      "preferences": "Preferences",
+      "actions": "Actions"
+    },
+    "validation_errors": {
+      "title_required": "Title is required",
+      "author_required": "Author is required",
+      "preferences_required": "At least one preference is required"
+    },
+    "buttons": {
+      "save": "Save",
+      "cancel": "Cancel",
+      "edit": "Edit",
+      "delete": "Delete"
+    }
+  },
+  "admin": {
+    "total_users": "Total Users",
+    "activity_posts": "Activity Posts",
+    "housing_posts": "Housing Posts",
+    "active_users": "Active Users",
+    "new_sign_ups": "New Sign-Ups",
+    "post_over_time_line_chart": "Post Over Time Line Chart"
+  },
+  "create_post_modal": {
+    "page_title": "Create New Post",
+    "title_label": "Title",
+    "description_label": "Description",
+    "gender_label": "Gender",
+    "location_label": "Location",
+    "rent_label": "Rent",
+    "move_in_date_label": "Move-In Date",
+    "beds_label": "Number of Beds",
+    "baths_label": "Number of Baths",
+    "tenants_label": "Number of Tenants",
+    "on_lease_label": "On Lease",
+    "free_laundry_label": "Free Laundry In Unit",
+    "heating_label": "Heating In Unit",
+    "gym_label": "Gym In Building",
+    "free_wifi_label": "Free Wifi",
+    "balcony_label": "Balcony",
+    "parking_space_label": "Parking Space",
+    "upload_image_label": "Upload Image",
+    "cancel_button": "Cancel",
+    "save_button": "Save",
+    "create_housing_post": "Create Housing Post",
+    "create_activity_post": "Create Activity Post",
+    "view_housing_posts": "View Housing Posts",
+    "view_activity_posts": "View Activity Posts"
+  },
+  "home_page_texts": {
+    "heading": "ONESPOT",
+    "heading2": "GO TO PLATFORM FOR ALL YOUR HOUSING AND ACTIVITY NEEDS",
+    "subTitle": "OneStop: Your Space, Your Pace! Housing, Activities, Networking - All under one roof!",
+    "subText1": "At OneStop, we're not just creating a platform; we're building acommunity where our users seamlessly connect to discover their ideal roommates and dream accommodations.",
+    "subText2": "Beyond housing, dive into a vibrant world of shared experiences through our exciting activity section. OneStop is more than a search – it's your ultimate hub for creating unforgettable college memories and forging lifelong connections. Join us on this journey to redefine student living and make every moment count!"
+  },
+  "landing_page": {
+    "about": {
+      "title": "Seamless Transitions: Your Gateway to New City Living",
+      "content": "Embark on your journey to a vibrant new city with confidence! Our all-in-one platform, OneSpot, is your key to discovering the perfect group or individual activities and finding the ideal home. Navigate the cityscape effortlessly with our unparalleled services and curated listings."
+    },
+    "housing": {
+      "title": "Discover Your Dream Home with OneSpot: The Ultimate Guide to Finding Your Perfect Abode",
+      "content": "Embark on your journey to finding the ideal home with OneSpot, your trusted partner in the quest for the perfect dwelling. Navigate the real estate landscape with confidence and precision, as OneSpot streamlines the house-hunting process like never before."
+    },
+    "activities": {
+      "title": "Discover Your Tribe: OneSpot - Your Ultimate Guide to Group and Individual Activities in a New City",
+      "content": "Embarking on a new chapter in a city can be exhilarating, but finding the right group or individual activities to connect with like-minded individuals is often the key to making it truly memorable. Enter OneSpot, your go-to resource for navigating the vibrant tapestry of social opportunities in your new city."
+    }
+  },
+  "about_us": {
+    "mission": "Our mission is dedicated to streamlining and elevating the housing and social experiences of our users. We have developed a sophisticated platform that empowers users to effortlessly identify compatible housemates, explore a myriad of activities, and validate housing options. Our commitment is rooted in the optimization of user time and effort, fostering a community-centric environment and delivering unparalleled convenience.",
+    "vission": "Our vision anticipates a future where our users are relieved of the challenges associated with locating suitable housemates and engaging in enjoyable activities. Our platform aspires to become the paramount solution for facilitating seamless housing arrangements and orchestrating social interactions, thereby empowering users to focus on the more important aspects of their lives.",
+    "the_team": "Team",
+    "team_member_1": {
+      "name": "Ajay  Devmane "
+    },
+    "team_member_2": {
+      "name": "Mohit Bhagwanani"
+    },
+    "team_member_3": {
+      "name": "Piyush Pandey"
+    },
+    "team_member_4": {
+      "name": "Vishnu Paduchuri"
+    }
+  },
+  "languages": {
+    "choose_language": "Choose Language",
+    "english": "English",
+    "tamil": "Tamil",
+    "telugu": "Telugu"
+  }
+}

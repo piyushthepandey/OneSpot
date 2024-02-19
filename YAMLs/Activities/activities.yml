@@ -1,0 +1,190 @@
+openapi: 3.1.0
+info:
+  title: Activity Post API
+  description: API for managing activity posts
+  version: 1.0.0
+
+paths:
+  /activity-posts:
+    post:
+      summary: Create Activity Post
+      description: Create a new activity post.
+      requestBody:
+        description: Details of the activity post
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActivityPost'
+      responses:
+        "201":
+          description: Activity post created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Activity post created successfully
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid input data
+
+  /activity-posts/{postId}:
+    get:
+      summary: Get Activity Post Details
+      description: Retrieve details of a specific activity post.
+      parameters:
+        - name: postId
+          in: path
+          description: ID of the activity post to retrieve
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful retrieval of activity post details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActivityPost'
+        "404":
+          description: Activity post not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Activity post not found
+
+    put:
+      summary: Update Activity Post
+      description: Update details of a specific activity post.
+      parameters:
+        - name: postId
+          in: path
+          description: ID of the activity post to update
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: Updated details of the activity post
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActivityPost'
+      responses:
+        "200":
+          description: Activity post updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Activity post updated successfully
+        "404":
+          description: Activity post not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Activity post not found
+
+    delete:
+      summary: Delete Activity Post
+      description: Delete a specific activity post.
+      parameters:
+        - name: postId
+          in: path
+          description: ID of the activity post to delete
+          required: true
+          schema:
+            type: string
+      responses:
+        "204":
+          description: Activity post deleted successfully
+        "404":
+          description: Activity post not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Activity post not found
+
+components:
+  schemas:
+    ActivityPost:
+      type: object
+      properties:
+        title:
+          type: string
+          description: Title of the activity post
+        description:
+          type: string
+          description: Description of the activity post
+        author:
+          type: string
+          description: ID of the author (User)
+        image:
+          type: string
+          description: URL of the image (optional)
+        shared:
+          type: array
+          items:
+            type: object
+            properties:
+              userId:
+                type: string
+                description: ID of the user with whom the activity is shared
+        preferences:
+          type: array
+          items:
+            type: string
+            description: User preferences for the activity
+        rsvps:
+          type: array
+          items:
+            type: object
+            properties:
+              userId:
+                type: string
+                description: ID of the user who RSVP'd
+        savedBy:
+          type: array
+          items:
+            type: object
+            properties:
+              userId:
+                type: string
+                description: ID of the user who saved the activity
+        createdDate:
+          type: string
+          format: date-time
+          description: Date and time when the activity post was created
+        updateDate:
+          type: string
+          format: date-time
+          description: Date and time when the activity post was last updated
+      required:
+        - title
+        - description
+        - author

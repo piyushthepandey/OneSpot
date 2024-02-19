@@ -1,0 +1,247 @@
+openapi: 3.1.0
+info:
+  title: OneSpot
+  description: OneSpot aims to simplify and enhance the housing and social experiences for university students and young adults by providing a platform where users can easily find compatible housemates, post and discover various activities, and even verify housing options. We strive to save users time and effort, creating a sense of community and convenience.
+  version: "v1.0"
+servers:
+  - url: http://localhost:8080
+tags:
+  - name: users
+    description: User endpoints
+paths:
+  /users:
+    get:
+      tags:
+        - users
+      summary: Fetch Users of OneSpot
+      description: Fetch All Users of OneSpot
+      operationId: getUsers
+      responses:
+        "200":
+          description: List of Platform Users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+        "401":
+          description: Unauthenticated request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error401"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error500"
+  /users/:id:
+    get:
+      tags:
+        - users
+      summary: Fetch User based on ID
+      description: Fetch User based on ID
+      operationId: getUserById
+      responses:
+        "200":
+          description: List of Platform Users
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          description: Unauthenticated request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error401"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error500"
+    put:
+      tags:
+        - users
+      summary: Update User Attributes based on ID
+      description: Update User Attributes based on ID
+      operationId: updateUserInfo
+      parameters:
+        - name: id
+          in: query
+          required: true
+          example: 8391038103810
+          schema:
+            type: string
+      requestBody:
+        description: Update User Info
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+        required: true
+      responses:
+        "200":
+          description: List of Platform Users
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          description: Unauthenticated request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error401"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error500"
+    delete:
+      tags:
+        - users
+      summary: Delete User Attributes based on ID
+      description: Delete User Attributes based on ID
+      operationId: deleteUserFromPlatfrom
+      parameters:
+        - name: id
+          in: query
+          required: true
+          example: 8391038103810
+          schema:
+            type: string
+      responses:
+        "200":
+          description: User Deleted from Platform
+        "401":
+          description: Unauthenticated request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error401"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error500"
+  /users/addNewUser:
+    post:
+      tags:
+        - users
+      summary: Create new Users on OneSpot
+      description: Create new Users on OneSpot
+      operationId: createNewUser
+      requestBody:
+        description: Update User Info
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+        required: true
+      responses:
+        "201":
+          description: User Created Successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "401":
+          description: Unauthenticated request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error401"
+        "500":
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error500"
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1200767
+        userRole:
+          type: string
+          enum:
+            - Admin
+            - User
+        profilePicture:
+          type: string
+          example: "https://image_url.com"
+        updatedDate:
+          type: string
+          example: "2023-11-20T00:00:00.000Z"
+        createdDate:
+          type: string
+          example: "2023-11-20T00:00:00.000Z"
+        userName:
+          type: string
+          example: "Vishnu"
+        password:
+          type: string
+          example: "pass@1"
+        emailId:
+          type: string
+          example: "vispaduchuri@gmail.com"
+        phoneNumber:
+          type: string
+          example: "8724192084"
+        personalInfo:
+          type: object
+          properties:
+            firstName:
+              type: string
+              example: "Vishnu"
+            lastName:
+              type: string
+              example: "Paduchuri"
+            gender:
+              type: string
+              enum:
+                - MALE
+                - FEMALE
+                - OTHERS
+            country:
+              type: string
+              example: "India"
+            dateOfBirth:
+              type: string
+              example: "1979-12-17T00:00:00.000Z"
+    Error401:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error Code
+          examples:
+            - AuthenticationError
+        message:
+          type: string
+          description: Error Message
+          examples:
+            - User is not authenticated.
+    Error500:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Error Code
+          examples:
+            - Internal Server Error
+        message:
+          type: string
+          description: Error Message
+          examples:
+            - Internal Server Error.

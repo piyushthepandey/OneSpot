@@ -1,0 +1,104 @@
+openapi: 3.1.0
+info:
+  title: User Authentication API
+  description: API for user authentication
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+
+paths:
+  /auth/login:
+    post:
+      summary: User Login
+      description: Authenticate a user and generate a token.
+      requestBody:
+        description: User credentials
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Successful authentication
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+              examples:
+                example1:
+                  value:
+                    token: "your_token_value"
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+              examples:
+                example1:
+                  value:
+                    error: "Invalid credentials"
+
+  /auth/register:
+    post:
+      summary: User Registration
+      description: Register a new user.
+      requestBody:
+        description: User details for registration
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              $ref: "#/components/schemas/RegistrationSuccessResponse"
+      responses:
+        '201':
+          description: User registered successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/AuthTokenResponse"
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                $ref: "#/components/schemas/ErrorResponse"
+              examples:
+                example1:
+                  value:
+                    error: "Username already exists"
+
+components:
+  schemas:
+    AuthTokenResponse:
+      type: object
+      properties:
+        token:
+          type: string
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+
+    RegistrationSuccessResponse:
+      type: object
+      properties:
+        message:
+          type: string

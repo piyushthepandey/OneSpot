@@ -1,0 +1,151 @@
+openapi: 3.1.0
+info:
+  title: Admin Management API
+  description: API for administrative functionalities
+  version: 1.0.0
+
+paths:
+  /admin/users:
+    get:
+      summary: Get User List
+      description: Retrieve the list of user accounts.
+      responses:
+        '200':
+          description: Successful retrieval of user list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  users:
+                    type: array
+                    items:
+                      type: object
+                      # Define the structure of a user account
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Unauthorized access
+
+  /admin/users/{userId}:
+    put:
+      summary: Update User Account
+      description: Update details of a specific user account.
+      parameters:
+        - name: userId
+          in: path
+          description: ID of the user account to update
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Updated details of the user account
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              # Define the structure of the updated user account
+      responses:
+        '200':
+          description: User account updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: User account updated successfully
+        '404':
+          description: User account not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: User not found
+
+  /admin/reported-posts:
+    get:
+      summary: Get Reported Posts
+      description: Retrieve the list of reported posts.
+      responses:
+        '200':
+          description: Successful retrieval of reported posts
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  reported_posts:
+                    type: array
+                    items:
+                      type: object
+                      # Define the structure of a reported post
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Unauthorized access
+
+    delete:
+      summary: Delete Reported Post
+      description: Delete a specific reported post.
+      parameters:
+        - name: postId
+          in: query
+          description: ID of the reported post to delete
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Reported post deleted successfully
+        '404':
+          description: Reported post not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Reported post not found
+
+  /admin/community-guidelines:
+    put:
+      summary: Update Community Guidelines
+      description: Update the community guidelines.
+      requestBody:
+        description: Updated community guidelines
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              # Define the structure of the updated community guidelines
+      responses:
+        '200':
+          description: Community guidelines updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Community guidelines updated successfully
